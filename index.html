@@ -1,0 +1,77 @@
+﻿
+
+<html>
+<head>
+    <title>APR Calculator</title>
+    <link rel="stylesheet" type="text/css" href="jscalculator.css">
+    <script type="text/javascript" src="jscalculator.js"></script>
+</head>
+<body onload="onLoad();" >
+
+	 <h2>APR Calculator</h2> 
+	 <p>For this practice scenario, input the data required below. Results will automatically be calculated and displayed.</p>
+  
+	
+<div id="new">
+<div class="inputs">
+	<div class="line-item">
+		
+		<label for=TeamTotalPlayers> Total SAs on team </label>
+		<input id="TeamTotalPlayers">
+	</div>
+
+	<div class="line-item">
+		
+		<label for=EligibleSA> SA(s) eligible and retained to the next term or graduate </label>	
+		<input id="EligibleSA">
+	</div>
+
+	<div class="line-item">
+		<label for=IneligibleSA> SA(s) retained but academically ineligible </label>
+		<input id="IneligibleSA">
+	</div>
+	<div class="line-item">
+		<label for=EligibleSANotReturning> SA(s) not returning but academically eligible upon departure </label>
+		<input id="EligibleSANotReturning">
+	</div>
+</div>
+
+</div>
+
+
+
+
+
+	<div class="line-item">
+		<label > Term Total Possible (denominator) </label>	
+		<div class="result"  id="TermTotalPossible">denominator</div>
+		
+	</div>
+	
+	<div class="line-item">
+		<label> Term Total Earned (numerator) </label>
+		<div class="result" id="TermTotalEarned">numerator</div>
+		
+	</div>
+
+<div id="results-wrapper">
+
+Results
+	<div class="line-item">
+		<label> Team APR Proportion </label>
+		<div class="result" id="TeamAPRProportion">APR proportion</div>
+			
+	</div>
+
+<div class="line-item">
+		<label > Team APR Score (APR proportion x 1000) </label>
+		<div class="result" id="TeamAPRScore">APR Score</div>
+		
+	</div>
+</div>
+
+	
+</div>
+  </body>
+  
+</html>

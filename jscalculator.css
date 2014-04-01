@@ -1,0 +1,42 @@
+#results, #2results{
+  border:dashed 1px grey;
+	width:150px;
+	height:200px;
+}
+
+#2results{
+	display: inline;
+}
+#new{
+	border:solid 1px blue;
+	margin-top:20px;
+}
+
+#results-wrapper{
+	border:solid 2px grey;
+	background-color:lightblue;
+}
+.result {
+    border: 1px solid grey;
+    color: grey;
+    height: 30px;
+    width: 150px;
+    background-color: lightgrey;
+}
+
+#new{
+  position:relative;
+}
+
+input, .result{
+
+}
+label{
+text-align: right;
+
+}
+.line-item{
+	
+	margin:15px 0px;
+
+}
