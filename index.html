@@ -3,16 +3,48 @@
 <html>
 <head>
     <title>APR Calculator</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="jscalculator.css">
+     <script type="text/javascript" src="jquery-ui/js/jquery-1.10.2.js"></script>
+
+     	<link href="jquery-ui/css/ui-lightness/jquery-ui-1.10.4.custom.css" rel="stylesheet">
+	<script src="jquery-ui/js/jquery-1.10.2.js"></script>
+	<script src="jquery-ui/js/jquery-ui-1.10.4.custom.js"></script>
+
+
+    <script type="text/javascript" src="bootstrap/js/bootsrap.js"></script>
     <script type="text/javascript" src="jscalculator.js"></script>
+
+ 
+	<script>
+	$(function() {
+		
+
+		$( "#tabs" ).tabs();
+	
+		
+	});
+	</script>
+
 </head>
 <body onload="onLoad();" >
 
+<!-- Tabs -->
+<h2 class="demoHeaders">Teaching Calculators</h2>
+<div id="tabs">
+	<ul class="nav nav-tabs" id="myTabs">
+		<li><a href="#tabs-apr">APR Calculator</a></li>
+		<li><a href="#tabs-gender" >Gender Calculator</a></li>
+
+	</ul>
+
+	<div id="tabs-apr" class="tab-pane">
 	 <h2>APR Calculator</h2> 
 	 <p>For this practice scenario, input the data required below. Results will automatically be calculated and displayed.</p>
   
+  <!-- APR Calculator -->
 	
-<div id="new">
+<div id="APRCalculator">
 <div class="inputs">
 	<div class="line-item">
 		
@@ -35,9 +67,6 @@
 		<input id="EligibleSANotReturning">
 	</div>
 </div>
-
-</div>
-
 
 
 
@@ -70,8 +99,105 @@ Results
 	</div>
 </div>
 
-	
+
 </div>
+</div>
+
+<!-- END APR CALCULATOR -->
+	
+<!-- GENDER CALCULATOR -->
+
+	<div id="tabs-gender" class="tab-pane">
+	 <h2>Gender Calculator</h2> 
+	 <p>For this practice scenario, input the data required below. Results will automatically be calculated and displayed.</p>
+<div id="GenderCalculator">
+<div class="inputs">
+	<div class="line-item">
+		
+		<label for=FullTimeUnderGrads> Number of Full-time Undergraduates: </label>
+		<input id="FullTimeUnderGrads">
+	</div>
+
+	<div class="line-item">
+		
+		<label for=NumMen> Men: </label>	
+		<input id="NumMen">
+	</div>
+
+	<div class="line-item">
+		<label for=NumWomen>Woman: </label>
+		<input id="NumWomen">
+	</div>
+	<div class="line-item">
+		<label for=TotalParticipantsTeams> Total Participants Men's and Woman's Teams: </label>
+		<input id="TotalParticipantsTeams">
+	</div>
+		<div class="line-item">
+		
+		<label for=NumMenTeams> Men: </label>	
+		<input id="NumMenTeams">
+	</div>
+
+	<div class="line-item">
+		<label for=NumWomenTeams>Woman: </label>
+		<input id="NumWomenTeams">
+	</div>
+</div>
+
+
+<table class="table" width="647">
+<thead>
+<tr>
+<th></th>
+<th>Women</th>
+<th>Men</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Undergraduates</td>
+<td><div class="result"  id="FemaleUndergradPercent">% female</div></td>
+<td><div class="result"  id="MaleUndergradPercent">% male</div></td>
+
+</tr>
+<tr>
+<td>Student-Athletes</td>
+<td><div class="result"  id="FemaleAthletePercent">% female athlete</div></td>
+<td><div class="result"  id="MaleAthletePercent">% male athlete</div></td>
+
+</tr>
+<tr>
+<td>Gap</td>
+<td><div class="result"  id="FemaleGap">female gap</div></td>
+<td><div class="result"  id="MaleGap">male gap</div></td>
+
+</tr>
+</tbody>
+</table>
+
+	
+
+	
+</div></div>
+
+
+<!-- END GENDER CALCULATOR -->
+
+
+	</div>
+
+
+
+
+
+
+ 
+       
+
+
+
+
   </body>
   
 </html>

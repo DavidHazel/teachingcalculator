@@ -64,8 +64,8 @@ function calcTeamAPRscore(){
 /*
 Rerun all calcualtions, we do this becasue we have limited inputs and its easier just to recalc the page
 */
-function runCalculations(){
-	console.log("running calcs");
+function runAPRCalculations(){
+//	console.log("running calcs");
 	calcTermTotalPossible();
 	calcTermTotalEarned();
 	calcTermTotalEarned();
@@ -73,13 +73,40 @@ function runCalculations(){
 	calcTeamAPRscore();
 }
 
+function runGenderCalculations(){
+
+	var a = document.getElementById('FullTimeUnderGrads').value;
+	var b = document.getElementById('NumMen').value;
+	var c = document.getElementById('NumWomen').value;
+	var d = document.getElementById('TotalParticipantsTeams').value;
+	var e = document.getElementById('NumMenTeams').value;
+	var f = document.getElementById('NumWomenTeams').value;
+
+	setResultsValue('FemaleUndergradPercent', c/a);
+	setResultsValue('MaleUndergradPercent', b/a);
+	setResultsValue('FemaleAthletePercent', f/d);
+	setResultsValue('MaleAthletePercent', e/d);
+	setResultsValue('FemaleGap', (f/d) - (c/a) );
+	setResultsValue('MaleGap', (e/d) - (b/a) );
+
+
+}
+
 
 function onLoad(){
-	document.getElementById('TeamTotalPlayers').onkeyup = runCalculations;
-	document.getElementById('IneligibleSA').onkeyup = runCalculations;
-	document.getElementById('EligibleSA').onkeyup = runCalculations;
-	document.getElementById('EligibleSANotReturning').onkeyup = runCalculations;
-	
+	document.getElementById('TeamTotalPlayers').onkeyup = runAPRCalculations;
+	document.getElementById('IneligibleSA').onkeyup = runAPRCalculations;
+	document.getElementById('EligibleSA').onkeyup = runAPRCalculations;
+	document.getElementById('EligibleSANotReturning').onkeyup = runAPRCalculations;
+
+	document.getElementById('FullTimeUnderGrads').onkeyup = runGenderCalculations;
+	document.getElementById('NumMen').onkeyup = runGenderCalculations;
+	document.getElementById('NumWomen').onkeyup = runGenderCalculations;
+	document.getElementById('TotalParticipantsTeams').onkeyup = runGenderCalculations;
+	document.getElementById('NumMenTeams').onkeyup = runGenderCalculations;
+	document.getElementById('NumWomenTeams').onkeyup = runGenderCalculations;
+
+
 
 	
 	
